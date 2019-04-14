@@ -12,14 +12,14 @@ mainClassName = 'main.java.Main'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    jcenter()
+    //jcenter()
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
 
     compile "junit:junit:4.12" 
-    compile files('cls/')
+    //compile files('cls/')
 }
 
 test {
