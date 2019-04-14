@@ -1,7 +1,7 @@
-/*
+
 plugins {
    id "com.github.spotbugs" version "1.6.11"
-}*/
+}
 
 apply plugin: 'application'
 apply plugin: 'jacoco'
@@ -23,14 +23,16 @@ dependencies {
 }
 
 test {
+    /*
 	filter {
-	//specific test class
-	//includeTestsMatching "GivenWhiteBox"
-	//includeTestsMatching "CourseTest"
+	specific test class
+	includeTestsMatching "GivenWhiteBox"
+	includeTestsMatching "CourseTest"
 	}
+	*/
 }
 
-/*
+
 ///////////////////////////////////////////////////////////////////////////
 // Configure Checkstyle
 ///////////////////////////////////////////////////////////////////////////
@@ -67,5 +69,5 @@ test {
      xml.enabled = false
      html.enabled = true
    }
-   */
+  
  }
