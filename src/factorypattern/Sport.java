@@ -62,7 +62,6 @@ public class Sport implements CarType {
     /**
      * Method to that specifies the tire size.
      * Hybrid tire size comes in 14,15, 16,17 inches. 
-     * @param an int that specifies tire size.
      */ 
     public void tireSize(int size) {
         if (size == 14) {

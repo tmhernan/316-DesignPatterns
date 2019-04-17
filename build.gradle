@@ -7,7 +7,7 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 
 
-mainClassName = 'main.java.Main'
+mainClassName = 'factorypattern.java.Main'
 
 
 // In this section you declare where to find the dependencies of your project
@@ -39,7 +39,7 @@ test {
  apply plugin: 'checkstyle'
  checkstyle {
    // Keep checkstyle a little quieter
-   ignoreFailures = true
+   ignoreFailures = false
    showViolations = false
  }
 
@@ -60,7 +60,7 @@ test {
 
  spotbugs {
    toolVersion = '3.1.12'
-   ignoreFailures = true
+   ignoreFailures = false
  }
 
  // To generate an HTML report instead of XML
@@ -69,5 +69,4 @@ test {
      xml.enabled = false
      html.enabled = true
    }
-  
  }

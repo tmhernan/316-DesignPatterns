@@ -1,7 +1,4 @@
-package main.java;
-
-import factorypattern.CarType;
-import factorypattern.CarTypeFactory;
+package factorypattern;
 
 public class Main {
 

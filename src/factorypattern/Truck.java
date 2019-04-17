@@ -28,7 +28,6 @@ public class Truck implements CarType {
     /**
      * Method to add a specific number of cylinders
      * to the Sport.
-     * @param an int that specifies the cylinder num.
      */
     public void cylinders(int cylinder) {
         
@@ -49,7 +48,6 @@ public class Truck implements CarType {
     /**
      * Method to that specifies the transmission type.
      * 1 is automatic. 2 is manual.
-     * @param an int that specifies the transmission type.
      */   
     public void tranmission(int auto) {
         if (auto == 1) {
@@ -64,7 +62,6 @@ public class Truck implements CarType {
     /**
      * Method to that specifies the tire size.
      * Truck tire size comes in 16-19 inches. 
-     * @param an int that specifies tire size.
      */ 
     public void tireSize(int size) {
         if (size == 16) {
