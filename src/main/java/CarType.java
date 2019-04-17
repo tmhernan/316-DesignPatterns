@@ -1,4 +1,4 @@
-package factorypattern;
+package main.java;
 
 public interface CarType {
     

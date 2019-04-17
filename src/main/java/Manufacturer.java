@@ -1,4 +1,4 @@
-package factorypattern;
+package main.java;
 
 //Not needed as of yet
 

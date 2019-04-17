@@ -1,26 +1,26 @@
-package factorypattern;
+package main.java;
 
-public class Truck implements CarType {
-    
+public class Sport implements CarType {
+
     @Override
     public void carTypeGreeting() {
-        System.out.println("You've got a Truck!");
+        System.out.println("You've got a Sport!");
         
     } 
-
+    
     /**
-     * Method to add a color to the truck. 
+     * Method to add a color to the sport. 
      */
     public void color(String color) {
         
         if (color.equalsIgnoreCase("red")) {
             System.out.println("Color is red.");
-        } else if (color.equalsIgnoreCase("white")) {
-            System.out.println("Color is white.");
-        } else if (color.equalsIgnoreCase("black")) {
-            System.out.println("Color is black.");
+        } else if (color.equalsIgnoreCase("blue")) {
+            System.out.println("Color is blue.");
+        } else if (color.equalsIgnoreCase("yellow")) {
+            System.out.println("Color is yellow.");
         } else {
-            System.out.println("Truck does not come in that color. "
+            System.out.println("\nSport does not come in that color. "
                     + "Pick a different color");
         }
     }
@@ -40,7 +40,7 @@ public class Truck implements CarType {
         } else if (cylinder == 8) {
             System.out.println("Cylinder number is 8");
         } else {
-            System.out.println("Hybrid does not come with " + cylinder + "cylinder(s), "
+            System.out.println("Sport does not come with " + cylinder + "cylinder(s), "
                     + "only 2 or 4. Pick a different number of cylinders.");
         }
     }
@@ -51,9 +51,9 @@ public class Truck implements CarType {
      */   
     public void tranmission(int auto) {
         if (auto == 1) {
-            System.out.println("\nTransmission is automatic.");
+            System.out.println("Transmission is automatic.");
         } else if (auto == 2) {
-            System.out.println("\nTransmission is manual.");
+            System.out.println("Transmission is manual.");
         } else {
             System.out.println("Invalid input for transmission. Pick again.");
         }
@@ -61,21 +61,18 @@ public class Truck implements CarType {
     
     /**
      * Method to that specifies the tire size.
-     * Truck tire size comes in 16-19 inches. 
+     * Hybrid tire size comes in 14,15, 16,17 inches. 
      */ 
     public void tireSize(int size) {
-        if (size == 16) {
-            System.out.println("\nTire Size is 16 inches.");
-        } else if (size == 17) {
-            System.out.println("\nTire Size is 17 inches.");
-        } else if (size == 18) {
-            System.out.println("\nTTire Size is 18 inches.");
-        } else if (size == 19) {
-            System.out.println("\nTTire Size is 19 inches.");
+        if (size == 14) {
+            System.out.println("Tire Size is 14 inches.");
+        } else if (size == 15) {
+            System.out.println("Tire Size is 15 inches.");
+        } else if (size == 16) {
+            System.out.println("TTire Size is 16 inches.");
         } else {
             System.out.println("Tire size not available for Sport. Pick again..");
-        }
-        
+        }    
     }
-
+    
 }
