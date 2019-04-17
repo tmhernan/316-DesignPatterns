@@ -3,33 +3,40 @@ package main.java;
 public class Sport implements CarType {
 
     @Override
-    public void carTypeGreeting() {
-        System.out.println("You've got a Sport!");
+    public String carTypeGreeting() {
+        String greet = "You've got a Sport!";
+        System.out.println(greet);
         
+        return greet;
     } 
     
     /**
      * Method to add a color to the sport. 
      */
-    public void color(String color) {
+    public String color(String color) {
         
         if (color.equalsIgnoreCase("red")) {
-            System.out.println("Color is red.");
+            color = "Color is red.";
+            System.out.println(color);
         } else if (color.equalsIgnoreCase("blue")) {
-            System.out.println("Color is blue.");
+            color = "Color is blue";
+            System.out.println(color);
         } else if (color.equalsIgnoreCase("yellow")) {
-            System.out.println("Color is yellow.");
+            color = "Color is yellow.";
+            System.out.println(color);
         } else {
-            System.out.println("\nSport does not come in that color. "
-                    + "Pick a different color");
+            color = "\nSport does not come in that color. "
+                    + "Pick a different color";
+            System.out.println(color);
         }
+        return color;
     }
     
     /**
      * Method to add a specific number of cylinders
      * to the Sport.
      */
-    public void cylinders(int cylinder) {
+    public int cylinders(int cylinder) {
         
         if (cylinder == 2) {
             System.out.println("Cylinder number is 2");
@@ -43,13 +50,14 @@ public class Sport implements CarType {
             System.out.println("Sport does not come with " + cylinder + "cylinder(s), "
                     + "only 2 or 4. Pick a different number of cylinders.");
         }
+        return cylinder;
     }
     
     /**
      * Method to that specifies the transmission type.
      * 1 is automatic. 2 is manual.
      */   
-    public void tranmission(int auto) {
+    public int tranmission(int auto) {
         if (auto == 1) {
             System.out.println("Transmission is automatic.");
         } else if (auto == 2) {
@@ -57,13 +65,14 @@ public class Sport implements CarType {
         } else {
             System.out.println("Invalid input for transmission. Pick again.");
         }
+        return auto;
     }
     
     /**
      * Method to that specifies the tire size.
      * Hybrid tire size comes in 14,15, 16,17 inches. 
      */ 
-    public void tireSize(int size) {
+    public int tireSize(int size) {
         if (size == 14) {
             System.out.println("Tire Size is 14 inches.");
         } else if (size == 15) {
@@ -72,7 +81,8 @@ public class Sport implements CarType {
             System.out.println("TTire Size is 16 inches.");
         } else {
             System.out.println("Tire size not available for Sport. Pick again..");
-        }    
+        }   
+        return size;
     }
     
 }

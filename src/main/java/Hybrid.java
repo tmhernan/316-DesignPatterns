@@ -3,30 +3,37 @@ package main.java;
 public class Hybrid implements CarType {
 
     @Override
-    public void carTypeGreeting() {
-        System.out.println("You've got a Hybrid!");
+    public String carTypeGreeting() {
+        String greet = "You've got a Hybrid!";
+        System.out.println(greet);
         
+        return greet; 
     } 
     
     /**
      * Method to add a color to the hybrid.
      */
-    public void color(String color) {
+    public String color(String color) {
         
         if (color.equalsIgnoreCase("silver")) {
-            System.out.println("Color is silver.");
+            color = "Color is silver.";
+            System.out.println(color);
         } else if (color.equalsIgnoreCase("white")) {
-            System.out.println("Color is white.");
+            color = "Color is white.";
+            System.out.println(color);
         } else {
-            System.out.println("Hybrid does not come in that color. Order again");
+            color = "Hybrid does not come in that color. Order again";
+            System.out.println(color);
         }
+        
+        return color;
     }
     
     /**
      * Method to add a specific number of cylinders
      * to the hybrid.
      */
-    public void cylinders(int cylinder) {
+    public int cylinders(int cylinder) {
         
         if (cylinder == 2) {
             System.out.println("Cylinder number is 2");
@@ -36,25 +43,27 @@ public class Hybrid implements CarType {
             System.out.println("\nHybrid does not come with " + cylinder 
                     + "cylinder(s), only 2 or 4. Order again.");
         }
+        return cylinder;
     }
     
     /**
      * Method to that specifies the transmission type.
      * 1 is automatic. Hybrid only comes automatic.
      */    
-    public void tranmission(int auto) {
+    public int tranmission(int auto) {
         if (auto == 1) {
             System.out.println("Transmission is automatic.");
         } else {
             System.out.println("Hybrid transmission does not come in manual.");
         }
+        return auto;
     }
     
     /**
      * Method to that specifies the tire size.
      * Hybrid tire size comes in 15,16, 17 inches. 
      */ 
-    public void tireSize(int size) {
+    public int tireSize(int size) {
         if (size == 15) {
             System.out.println("Tire Size is 15 inches.");
         } else if (size == 16) {
@@ -64,6 +73,7 @@ public class Hybrid implements CarType {
         } else {
             System.out.println("Tire size not available for Hybrid. Pick again.");
         }
+        return size;
     }
         
     

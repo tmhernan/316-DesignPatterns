@@ -2,15 +2,15 @@ package main.java;
 
 public interface CarType {
     
-    void carTypeGreeting();
+    String carTypeGreeting();
     
-    void color(String color);
+    String color(String color);
     
-    void cylinders(int cylinder);
+    int cylinders(int cylinder);
     
-    void tranmission(int auto);
+    int tranmission(int auto);
     
-    void tireSize(int size);
+    int tireSize(int size);
 
 }
 
