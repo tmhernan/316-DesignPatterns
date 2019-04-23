@@ -1,5 +1,8 @@
 package main.java;
 
+import main.java.factory.CarType;
+import main.java.factory.CarTypeFactory;
+
 public class Main {
 
     /**
