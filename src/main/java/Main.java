@@ -1,7 +1,14 @@
 package main.java;
 
+import main.java.builder.ChassisMaterial;
+import main.java.builder.Cylinder;
+import main.java.builder.HondaCarOrder;
+import main.java.builder.OrderType;
+import main.java.builder.TireSize;
+
 import main.java.factory.CarType;
 import main.java.factory.CarTypeFactory;
+
 
 public class Main {
 
@@ -39,6 +46,31 @@ public class Main {
         truck.cylinders(2);
         truck.tireSize(16);
         truck.tranmission(1);
+        
+        System.out.println("\nBuilder Pattern: \n");
+
+        
+        HondaCarOrder firstOrder = new HondaCarOrder.HondaCarOrderBuilder()
+                .chooseColor("red")
+                .chooseOrderType(OrderType.TRUCK)
+                .chooseChaMaterial(ChassisMaterial.ALUMINUM)
+                .chooseManual(true)
+                .chooseCylinder(Cylinder.TWO)
+                .chooseTireSize(TireSize.FIFTEEN)
+                .build();
+        
+        System.out.println(firstOrder + "\n");
+        
+        HondaCarOrder secondOrder = new HondaCarOrder.HondaCarOrderBuilder()
+                .chooseColor("yellow")
+                .chooseOrderType(OrderType.HYBRID)
+                .chooseChaMaterial(ChassisMaterial.ALUMINUM)
+                .chooseManual(true)
+                .chooseCylinder(Cylinder.SIX)
+                .chooseTireSize(TireSize.SEVENTEEN)
+                .build();
+        
+        System.out.println(secondOrder);
     }
 
 }

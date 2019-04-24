@@ -2,11 +2,13 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
+import main.java.factory.CarType;
+import main.java.factory.CarTypeFactory;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import main.java.factory.CarType;
-import main.java.factory.CarTypeFactory;
+
 
 
 
