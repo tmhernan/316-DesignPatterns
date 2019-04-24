@@ -1,29 +1,23 @@
 package main.java.builder;
 
 public class HondaCarOrder {
-    public Door doorType;
     public String color;
-    public static Model model;
+    // public static Model model;
     public ChassisMaterial material;
     public Cylinder cylinder;
     public TireSize tireSize;
     public boolean manual;
-    public Drive driveType;
-    public ChargeType chargeType;
     public OrderType orderType;
 
     public static class HondaCarOrderBuilder {
 
-        public static Door doorType;
-        public static String color;
-        public static Model model;
-        public static ChassisMaterial material;
-        public static Cylinder cylinder;
-        public static TireSize tireSize;
-        public static boolean manual;
-        public static Drive driveType;
-        public static ChargeType chargeType;
-        public static OrderType orderType;
+        public String color;
+        // public Model model;
+        public ChassisMaterial material;
+        public Cylinder cylinder;
+        public TireSize tireSize;
+        public boolean manual;
+        public OrderType orderType;
 
         /*
          * public HondaCarOrder buildOrder() {
@@ -47,7 +41,7 @@ public class HondaCarOrder {
          */
         public HondaCarOrderBuilder chooseColor(String color) {
 
-            HondaCarOrderBuilder.color = color;
+            this.color = color;
             return this;
         }
 
@@ -56,27 +50,27 @@ public class HondaCarOrder {
          */
         public HondaCarOrderBuilder chooseOrderType(OrderType orderType) {
 
-            HondaCarOrderBuilder.orderType = orderType;
+            this.orderType = orderType;
             return this;
         }
 
         public HondaCarOrderBuilder chooseChaMaterial(ChassisMaterial material) {
-            HondaCarOrderBuilder.material = material;
+            this.material = material;
             return this;
         }
 
         public HondaCarOrderBuilder chooseCylinder(Cylinder cylinder) {
-            HondaCarOrderBuilder.cylinder = cylinder;
+            this.cylinder = cylinder;
             return this;
         }
 
         public HondaCarOrderBuilder chooseTireSize(TireSize tireSize) {
-            HondaCarOrderBuilder.tireSize = tireSize;
+            this.tireSize = tireSize;
             return this;
         }
 
         public HondaCarOrderBuilder chooseManual(boolean manual) {
-            HondaCarOrderBuilder.manual = manual;
+            this.manual = manual;
             return this;
         }
 
@@ -86,26 +80,22 @@ public class HondaCarOrder {
         public HondaCarOrder build() {
 
             HondaCarOrder order = new HondaCarOrder();
-            order.color = HondaCarOrderBuilder.color;
-            order.orderType = HondaCarOrderBuilder.orderType;
-            order.material = HondaCarOrderBuilder.material;
-            order.cylinder = HondaCarOrderBuilder.cylinder;
-            order.tireSize = HondaCarOrderBuilder.tireSize;
-            order.manual = HondaCarOrderBuilder.manual;
+            order.color = this.color;
+            order.orderType = this.orderType;
+            order.material = this.material;
+            order.cylinder = this.cylinder;
+            order.tireSize = this.tireSize;
+            order.manual = this.manual;
             return order;
         }
 
     }
 
-    private HondaCarOrder() {
-        this.model = HondaCarOrderBuilder.model;
-        this.material = HondaCarOrderBuilder.material;
-        this.cylinder = HondaCarOrderBuilder.cylinder;
-        this.tireSize = HondaCarOrderBuilder.tireSize;
-        this.manual = HondaCarOrderBuilder.manual;
-        this.color = HondaCarOrderBuilder.color;
-    }
-
+    /*
+     * private HondaCarOrder() { this.model = this.model; this.material =
+     * this.material; this.cylinder = this.cylinder; this.tireSize = this.tireSize;
+     * this.manual = this.manual; this.color = this.color; }
+     */
     @Override
     public String toString() {
         String second;

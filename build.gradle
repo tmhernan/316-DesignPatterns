@@ -27,6 +27,8 @@ test {
 	filter {
 	//specific test class
 	includeTestsMatching "FactoryTest"
+	includeTestsMatching "BuilderTest"
+	
 	}
 }
 
