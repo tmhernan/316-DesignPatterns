@@ -14,8 +14,7 @@ import org.junit.Test;
 
 public class BuilderTest {
 
-    HondaCarOrder firstOrder;
-    HondaCarOrder secondOrder;
+
 
     @Test
     public void testFirstBuild() {
